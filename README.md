@@ -12,21 +12,21 @@ In this challenge, you will build the logic needed to model a simple thermostat.
 - You can reset the temperature to 20 with a reset function
 - You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25 is medium-usage, anything else is high-usage.
 
-
-(In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
-
-### Learning Objectives covered
+### Learning Objectives
 - Use Jasmine to Test-Drive Development of a thermostat
 
 
 ### To complete this challenge, you will need to:
- Translate the first specification into a test
- Pass the test
- Translate the next specification
- Repeat until you've run out of tests
-Resources
-Jasmine documentation
-Constructor functions, prototypes and the new keyword
-Strict Mode on MDN
-Master the this keyword
-Some examples of the scope of variables in JavaScript
+- Translate the first specification into a test
+- Pass the test
+- Translate the next specification
+- Repeat until you've run out of tests
+
+In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.
+
+### Resources
+- Jasmine documentation
+- Constructor functions, prototypes and the new keyword
+- Strict Mode on MDN
+- Master the this keyword
+- Some examples of the scope of variables in JavaScript
