@@ -14,12 +14,40 @@ describe('Thermostat', function () {
     })
   })
 
-  describe('#up', function () {
-    it('increases temperature by 1', function () {
-      t1.up()
+  describe('#reset', function() {
+    it('resets the temperature to DEFAULT_TEMPERATURE', function() {
+      t1.temperature = 25
+      t1.reset()
+      expect(t1.temperature).toEqual(20)
+    });
+  });
 
-      expect(t1.temperature).toEqual(21)
-    })
+  describe('#up', function () {
+    describe('when powerSave mode is on', function() {
+      it('increases temperature by 1', function () {
+        t1.up()
+        expect(t1.temperature).toEqual(21)
+      })
+      it('does not increase temperature over max', function() {
+        t1.temperature = 25
+        t1.up()
+        expect(t1.temperature).toEqual(25) 
+      })
+
+
+    });
+    describe('when powerSave mode is off', function () {
+      it('increases temperature by 1', function () {
+        t1.up()
+        expect(t1.temperature).toEqual(21)
+      })
+      it('does not increase temperature over max', function () {
+        t1.toggle_PS_mode()
+        t1.temperature = 32
+        t1.up()
+        expect(t1.temperature).toEqual(32)
+      })
+    });
   })
 
   describe('#down', function () {
@@ -47,5 +75,19 @@ describe('Thermostat', function () {
     })
   })
 
+  describe('#energyUsageMode', function() {
+    it('returns low when temperature below 18', function() {
+      t1.temperature = 17
+      expect(t1.energyUsageMode()).toEqual('low')
+    })
+    it('returns medium when temperature is between 18 and 25', function () {
+      t1.temperature = 20
+      expect(t1.energyUsageMode()).toEqual('medium')
+    })
+    it('returns high when temperature above 25', function () {
+      t1.temperature = 27
+      expect(t1.energyUsageMode()).toEqual('high')
+    })
+  })
 
 })

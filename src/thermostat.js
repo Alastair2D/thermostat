@@ -44,3 +44,16 @@ Thermostat.prototype.toggle_PS_mode = function() {
   } 
 }
 
+Thermostat.prototype.energyUsageMode = function() {
+  if (this.temperature < 18) {
+    return 'low'
+  } 
+  else if (this.temperature > 17 && this.temperature < 26 ) {
+    return 'medium' 
+  } 
+  else {
+    return 'high'
+  }
+}
+
+
