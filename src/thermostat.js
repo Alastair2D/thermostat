@@ -8,7 +8,20 @@ function Thermostat() {
 }
 
 Thermostat.prototype.up = function() {
-  this.temperature++                             //+=1
+  if (this.powerSave === true) {
+    if (this.temperature >= this.PS_ON_MAX_TEMP) {
+      return
+    } else {
+      this.temperature++
+    }
+  }
+  else {
+    if (this.temperature >= this.PS_OFF_MAX_TEMP){
+      return
+    } else {
+      this.temperature++
+    }
+  }
 }
 
 Thermostat.prototype.down = function() {
