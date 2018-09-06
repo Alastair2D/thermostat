@@ -35,4 +35,17 @@ describe('Thermostat', function () {
     });
   })
 
+  describe('#toggle_PS_mode', function() {
+    it('changes PS mode from on to off', function() {
+      t1.toggle_PS_mode()
+      expect(t1.powerSave).toEqual(false)
+    })
+    it('changes PS mode from off to on', function () {
+      t1.powerSave = false
+      t1.toggle_PS_mode()
+      expect(t1.powerSave).toEqual(true)
+    })
+  })
+
+
 })
