@@ -7,6 +7,10 @@ function Thermostat() {
   this.PS_OFF_MAX_TEMP = 32 
 }
 
+Thermostat.prototype.reset = function() {
+  this.temperature = this.DEFAULT_TEMPERATURE
+};
+
 Thermostat.prototype.up = function() {
   if (this.powerSave === true) {
     if (this.temperature >= this.PS_ON_MAX_TEMP) {
