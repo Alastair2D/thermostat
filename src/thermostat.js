@@ -36,6 +36,10 @@ Thermostat.prototype.down = function() {
   }
 } 
 
+// Thermostat.prototype.toggle_PS_to_OFF
+// Thermostat.prototype.toggle_PS_to_OFF
+
+
 Thermostat.prototype.toggle_PS_mode = function() {
   if (this.powerSave === true) {
     this.powerSave = false 
@@ -49,20 +53,7 @@ Thermostat.prototype.toggle_PS_mode = function() {
   if (this.powerSave === false && this.temperature <= 25) {
     this.powerSave = true
   } 
-
 }
-
-// Thermostat.prototype.toggle_PS_mode = function() {
-//   if (this.powerSave === true) {
-//     this.powerSave = false 
-//   } else {
-//     this.powerSave = true {
-//       if this.temperature > 25 {
-//         this.temperature = 25
-//       }
-//     }
-//   } 
-// }
 
 Thermostat.prototype.energyUsageMode = function() {
   if (this.temperature < 18) {
