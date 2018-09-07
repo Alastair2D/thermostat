@@ -3,10 +3,6 @@ $(document).ready(function() {
   showTemperature()
 })
 
-// $(document).ready(function () {
-//   $('#temperature').text('hello jquery world');
-// })
-
 function showTemperature() {
   $('#temperature').text(thermostat.temperature)
   $('#temperature').attr('class', thermostat.energyUsageMode())
