@@ -29,12 +29,12 @@ $('#reset').click(function () {
 $('#ps_on').click(function () {
   thermostat.toggle_PS_mode()
   $('#ps_status').text('Power Saving: On')
-  showTemperature
+  showTemperature()
 })
 
 $('#ps_off').click(function () {
   thermostat.toggle_PS_mode()
   $('#ps_status').text('Power Saving: Off')
-  showTemperature
+  showTemperature()
 
 })
