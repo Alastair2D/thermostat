@@ -8,7 +8,8 @@
 </head>
 <body>
 
-  <h2> BIG TEMPERATURE NUMBER </h2>
+
+<h2 id='temperature'>TEMPERATURE</h2>
 
 <button id='ps_on'>POWER SAVE ON</button>
 <button id='ps_off'>POWER SAVE OFF</button>
@@ -19,7 +20,7 @@
 <!-- <a href="http://jquery.com/">jQuery</a> -->
 <script src="jquery.js"></script>
 
-<script>
+<!-- <script>
 window.onload = function() {
     alert( "welcome" ); 
 }
@@ -29,11 +30,26 @@ window.onload = function() {
 $(document).ready(function () { 
   alert("new welcome message")
  }); 
-</script>
+</script> -->
+<!-- 
+<script>
+  $(document).ready(function () { 
+    $('#temperature').text('hello jquery world'); 
+  })
+</script> -->
+
+
+
+<!-- // Utility function that says 'only execute the function when the document is ready:
+// $(document).ready(function() { })
+
+// jQuery selector: $('element')
+
+// Event listeners: $('element').on('event', function() { }) -->
 
 
 <script src="thermostat.js"></script>
-
+<script src="thermointerface.js"></script>
 
 </body>
 </html>
