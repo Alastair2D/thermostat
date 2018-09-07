@@ -36,7 +36,7 @@ Thermostat.prototype.down = function() {
   }
 } 
 
-Thermostat.prototype.toggle_PS_mode = function () {   // Could add Thermostat.prototype.toggle_PS_to_ON + OFF
+Thermostat.prototype.toggle_PS_mode = function () {      // Could add Thermostat.prototype.toggle_PS_to_ON + OFF
   if (this.powerSave === true) {
     this.powerSave = false 
     return

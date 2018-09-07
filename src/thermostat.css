@@ -9,3 +9,7 @@
 .high {
   color: red
 }
+
+#temperature {
+  text-align: center;
+}

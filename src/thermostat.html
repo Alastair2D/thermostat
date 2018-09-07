@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>THERMOSTAT</title>
+    <script src="jquery.js"></script>
+    <script src="thermostat.js"></script>
+    <script src="thermoInterface.js"></script>
+    <link rel="stylesheet" type="text/css" href="thermostat.css">
 
 </head>
 <body>
 
 <section>
   <h4> Current temperature from Weather API: <span id="current-temperature"></span></h4>
-
     <select id="current-city">
       <option value="london">London</option>
       <option value="newyork">New York</option>
       <option value="paris">Paris</option>
       <option value="tokyo">Tokyo</option>
     </select>
-
 </section>
 
-<h2 id='temperature'></h2>
-<h4 id='ps_status'> Power Saving: On </h4>
+<div id="wrapper">
+
+  <div id='temperature'></div>
+  <h4 id='ps_status'> Power Saving: On </h4>
 
 <button id='ps_on'>TOGGLE POWER SAVE MODE ON</button>
 <button id='ps_off'>TOGGLE POWER SAVE MODE OFF</button>
@@ -32,11 +36,7 @@
 <button id='reset'>RESET</button>
 
 
-  <script src="jquery.js"></script>
-  <script src="thermostat.js"></script>
-  <script src="thermoInterface.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="thermostat.css">
+</div>
 
 </body>
 </html>
