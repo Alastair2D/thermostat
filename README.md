@@ -17,7 +17,6 @@ In this challenge, you will build the logic needed to model a simple thermostat.
 ### Learning Objectives
 - Use Jasmine to Test-Drive Development of a thermostat
 
-
 ### To complete this challenge, you will need to:
 - Translate the first specification into a test
 - Pass the test
